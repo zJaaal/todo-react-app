@@ -18,20 +18,26 @@ const TodoAdd = ({ handleAdd }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="d-flex flex-column m-2">
-      <input
-        type="text"
-        name="description"
-        className="form-control"
-        placeholder="Learn Node.js"
-        autoComplete="off"
-        value={description}
-        onChange={handleInputChange}
-      />
-      <button className=" btn btn-outline-primary btn-block mt-1" type="submit">
-        Add To-Do
-      </button>
-    </form>
+    <>
+      <h2 className="text-center">Create To-Do</h2>
+      <form onSubmit={handleSubmit} className="d-flex flex-column m-2">
+        <input
+          type="text"
+          name="description"
+          className="form-control"
+          placeholder="Learn Node.js"
+          autoComplete="off"
+          value={description}
+          onChange={handleInputChange}
+        />
+        <button
+          className=" btn btn-outline-primary btn-block mt-1"
+          type="submit"
+        >
+          Add To-Do
+        </button>
+      </form>
+    </>
   );
 };
 

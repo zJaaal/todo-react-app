@@ -16,6 +16,7 @@ const TodoApp = () => {
     localStorage.setItem("TO-DOS", JSON.stringify(todos));
   }, [todos]);
 
+  //This function works as a comunication between father and child
   const handleAdd = (newTodo) => {
     dispatch({ type: "ADD", payload: newTodo });
   };
@@ -41,7 +42,6 @@ const TodoApp = () => {
           />
         </div>
         <div className="col-6">
-          <h2 className="text-center">Create To-Do</h2>
           <TodoAdd handleAdd={handleAdd} />
         </div>
       </div>
