@@ -3,7 +3,7 @@ import todoReducer from "./todoReducer";
 import TodoList from "./components/TodoList";
 import TodoAdd from "./components/TodoAdd";
 
-// This fucntion executes everytime you enter the app for the first time
+// This function executes everytime you enter the app for the first time
 const init = () => {
   return JSON.parse(localStorage.getItem("TO-DOS")) || [];
 };
